@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social</title>
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box;}
+        h1{display: none;}
+        section{max-width: 800px; margin: auto; border: 3px solid red; position: relative;
+        overflow: hidden;}
+        img{width: 100%; display: block;} /* width 100% 활용하면 부모 태그의 넓이(section 800px;)만큼 커짐 */
+        img:not(:first-of-type){position: absolute; top:0; left:0;}
+        [src="images/3-1.png"]{animation: up 1s 0.5s both; }
+        [src="images/3-2.png"]{animation: right 1s 1s both;}
+        [src*="3-3"]{animation: down 1.5s 0.7s both; }
+        [alt="여전히"]{animation: rotate 2s 0.5s both infinite alternate-reverse; width:45%; margin-top:57%; } 
+        img:nth-of-type(6){animation: scale 1.5s 0.3s both infinite alternate; width:30%; margin:58%;}
+        img:last-of-type{animation: last 1s 0.5s both; width:55%; margin:19%;}
+
+       @keyframes up {
+            from{opacity: 0; top: initial; bottom:-50px;}
+            to{opacity: 1; top: initial; bottom:0;}
+        }
+        @keyframes right {
+            from{opacity: 0; left:initial; right:-50px; }
+            to { opacity: 1; left:initial; right:0px; }
+        }
+        @keyframes down {
+            0%{opacity: 0; top:initial; top:-50px;}
+            100%{opacity: 1;top:initial; top:0px;}
+        }
+        @keyframes rotate{
+            0% {transform: rotate(0deg);}
+            10% {transform: rotate(45deg);}
+            20% {transform: rotate(-45deg);}
+            30% {transform: rotate(30deg);}
+            40% {transform: rotate(-30deg);}
+            50% {transform: rotate(20deg);}
+            60% {transform: rotate(-20deg);}
+            70% {transform: rotate(-10deg); }
+            80% {transform: rotate(10deg);}
+            90% {transform: rotate(-5deg);}
+            100% {transform: rotate(0deg);} 
+        }
+        @keyframes scale {
+            from{transform: scale(0.2); opacity: 0;}
+            to{transform: scale(1); opacity: 1;}
+        }
+        @keyframes last {
+            from{transform:skew(45deg);}
+            to{transform: (0deg);}
+        }   
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>사회적 거리두기</h1>
+        <img src="images/bg3.jpg" alt="배경">
+        <img src="images/3-1.png" alt="표지판">
+        <img src="images/3-2.png" alt="사람과 바이러스">
+        <img src="images/3-3.png" alt="사회적 거리두기, 1단계">
+        <img src="images/3-4.png" alt="여전히">
+        <img src="images/3-5.png" alt="Social 전화기">
+        <img src="images/3-6.png" alt="사람 3명">
+
+    </section>
+</body>
+</html>
